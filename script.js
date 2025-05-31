@@ -52,7 +52,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// WhatsApp Integration with Phone Input + Confirmation
 function sendMessage(event) {
   event.preventDefault();
 
@@ -61,18 +60,16 @@ function sendMessage(event) {
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  if (!name || !phone || !email || !message) {
-    alert("Please fill all fields.");
-    return;
-  }
+  const fullMessage = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
 
-  const whatsappNumber = "91" + phone.replace(/\D/g, '7080849355'); // converts to international format
-  const finalMessage = `👤 Contact Request\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage: ${message}\n\n✅ Contact successfully submitted.`;
+  // ✅ Replace your WhatsApp number here
+  const yourWhatsAppNumber = "917080849355";
 
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(finalMessage)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${yourWhatsAppNumber}&text=${encodeURIComponent(fullMessage)}`;
 
-  window.open(whatsappUrl, '_blank');
+  window.location.href = whatsappUrl;
 }
+  
 // Hamburger Toggle
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");

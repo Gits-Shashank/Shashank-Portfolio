@@ -63,7 +63,7 @@ function sendMessage(event) {
   const fullMessage = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
 
   // ✅ Replace your WhatsApp number here
-  const yourWhatsAppNumber = "917080849355";
+  const yourWhatsAppNumber = "7080849355";
 
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${yourWhatsAppNumber}&text=${encodeURIComponent(fullMessage)}`;
 

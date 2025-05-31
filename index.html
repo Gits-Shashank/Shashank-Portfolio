@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashank Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+ <header class="navbar">
+  <div class="logo">Shashank <span>Portfolio</span></div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav class="nav-links" id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="shashank-resume.pdf" class="cv-btn" download>Download CV</a>
+  </nav>
+</header>
+
+
+  <!-- HOME -->
+  <section id="home" class="home">
+    <div class="image-box">
+      <img src="Shashank.jpg" alt="Shashank" class="profile-img" />
+    </div>
+    <div class="home-text">
+      <h1>Hello, I'm <span class="highlight">Shashank Shukla</span></h1>
+      <h2>And I'm a <span id="typing"></span></h2>
+      <p>Web Developer passionate about clean code and responsive design.</p>
+      <div class="social-icons">
+        <a href="https://instagram.com/shashank_shukla708"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/qr/Q6MT3VIPWU7VC1"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/Gits-Shashank"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  
+  <div class="about-content">
+    <div class="qualification">
+      <h3>Qualifications</h3>
+      <ul>
+        <li><strong>High School:</strong> 89.83% – MDBL Inter college (2018)</li>
+        <li><strong>Intermediate:</strong> 79.6% – MDBL Inter College (2020)</li>
+        <li><strong>Graduation (BCA):</strong> 71.06% – Chhatrapati Shahu Ji Maharaj University, Kanpur (2020–2023)</li>
+      </ul>
+    </div>
+
+    <div class="description">
+      <p>
+        I have developed a strong foundation in computer science and web development. Alongside my graduation, I learned <strong>Linux OS</strong> and explored <strong>penetration testing</strong>. I am proficient in <strong>C programming</strong> and currently focus on designing responsive, user-friendly websites. I aim to build full-stack applications using <strong>Node.js</strong> and <strong>Express.js</strong> for backend development and plan to store and manage data using <strong>MongoDB</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>My Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="frontend.jpg" alt="Frontend" />
+        <div class="card-overlay">Frontend Development</div>
+      </div>
+      <div class="card">
+        <img src="libre.jpg" alt="LibreOffice" />
+        <div class="card-overlay">LibreOffice Expertise</div>
+      </div>
+      <div class="card">
+        <img src="datahandle.jpg" alt="Data Entry" />
+        <div class="card-overlay">Data Handling</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p id="live-time"></p>
+    <p>&copy;Shashank Portfolio | All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
